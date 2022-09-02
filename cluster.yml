@@ -1,17 +1,17 @@
 # Cluster Nodes
 nodes:
-  - address: 192.168.2.4
+  - address: 192.168.1.250
     user: root
     role: 
       - controlplane
       - etcd
     docker_socket: /var/run/docker.sock
-  - address: 192.168.2.5
+  - address: 192.168.1.249
     user: root
     role:
       - worker
     docker_socket: /var/run/docker.sock
-  - address: 192.168.2.6
+  - address: 192.168.1.248
     user: root
     role:
       - worker
