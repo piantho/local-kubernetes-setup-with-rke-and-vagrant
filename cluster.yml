@@ -1,6 +1,6 @@
 # Cluster Nodes
 nodes:
-  - address: 192.168.56.4
+  - address: 192.168.1.253
     user: root
     role: 
       - controlplane
