@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   ## Master Node
   config.vm.define "master" do |k8s_master|
     k8s_master.vm.provision "shell", path: "node_script.sh"
-    k8s_master.vm.network "private_network", ip: "172.16.128.4" 
+    k8s_master.vm.network "private_network", ip: "192.168.2.4" 
     k8s_master.vm.hostname = "master"
     k8s_master.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--audio", "none"]
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   ## Worker Node 1
   config.vm.define "worker1" do |k8s_worker|
     k8s_worker.vm.provision "shell", path: "node_script.sh"
-    k8s_worker.vm.network "private_network", ip: "172.16.128.5"
+    k8s_worker.vm.network "private_network", ip: "192.168.2.5"
     k8s_worker.vm.hostname = "worker1"
     k8s_worker.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--audio", "none"]
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   ## Worker Node 2
   config.vm.define "worker2" do |k8s_worker|
     k8s_worker.vm.provision "shell", path: "node_script.sh"
-    k8s_worker.vm.network "private_network", ip: "172.16.128.6"
+    k8s_worker.vm.network "private_network", ip: "192.168.2.6"
     k8s_worker.vm.hostname = "worker2"
     k8s_worker.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--audio", "none"]
