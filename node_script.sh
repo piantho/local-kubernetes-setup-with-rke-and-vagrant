@@ -18,7 +18,7 @@ sudo apt install -y curl gnupg2 software-properties-common apt-transport-https c
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
-sudo apt install -y containerd.io docker-ce=5:19.03.12~3-0~ubuntu-bionic docker-ce-cli=5:19.03.12~3-0~ubuntu-bionic
+sudo apt install -y containerd.io docker-ce=5:20.10.17~3-0~ubuntu-jammy docker-ce-cli=5:20.10.17~3-0~ubuntu-jammy
 
 # Create required directories
 sudo mkdir -p /etc/systemd/system/docker.service.d
